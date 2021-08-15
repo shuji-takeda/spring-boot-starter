@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>View</title>
+</head>
+<body>
+	<h1 th:text="${title}">View</h1>
+	<table>
+<tr>
+	<th>id</th><th>Bandname</th><th>BestSong</th><th>datetime</th>
+</tr>
+<tr th:each="view : ${viewList}">
+	<td th:text="${view.id}"></td>
+	<td th:text="${view.bandName}"></td>
+	<td th:text="${view.bestSong}"></td>
+	<td th:text="${view.created}"></td>
+</tr>
+</table>
+</body>
+</html>
